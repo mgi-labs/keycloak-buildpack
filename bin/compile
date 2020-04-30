@@ -14,5 +14,5 @@ curl -s --retry 3 -o $KEYCLOAK_ZIP -L $KEYCLOAK_URL
 echo "done"
 
 echo -n "-----> Unzipping Keycloak"
-unzip $KEYCLOAK_ZIP
+unzip $KEYCLOAK_ZIP -d $KEYCLOAK_DIR
 echo "done"
