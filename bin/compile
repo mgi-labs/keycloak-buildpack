@@ -1,0 +1,18 @@
+#!/bin/sh
+
+set -eu
+
+KEYCLOAK_VERSION=`cat ./bin/version`
+KEYCLOAK_DIR="$1/target"
+KEYCLOAK_ZIP="$KEYCLOAK_DIR/keycloak.zip"
+KEYCLOAK_URL="https://downloads.jboss.org/keycloak/$KEYCLOAK_VERSION/keycloak-$KEYCLOAK_VERSION.zip"
+
+mkdir -p $KEYCLOAK_DIR
+
+echo -n "-----> Downloading Keycloak... from $KEYCLOAK_URL to $KEYCLOAK_ZIP"
+curl -s --retry 3 -o $KEYCLOAK_ZIP -L $KEYCLOAK_URL
+echo "done"
+
+echo -n "-----> Unzipping Keycloak"
+unzip $KEYCLOAK_ZIP
+echo "done"
