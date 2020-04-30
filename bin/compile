@@ -3,7 +3,7 @@
 set -eu
 
 KEYCLOAK_VERSION=`cat ./bin/version`
-KEYCLOAK_DIR="$1"
+KEYCLOAK_DIR="$1/target"
 KEYCLOAK_ZIP="$KEYCLOAK_DIR/keycloak.zip"
 KEYCLOAK_URL="https://downloads.jboss.org/keycloak/$KEYCLOAK_VERSION/keycloak-$KEYCLOAK_VERSION.zip"
 
