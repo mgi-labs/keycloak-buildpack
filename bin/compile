@@ -18,3 +18,10 @@ unzip $KEYCLOAK_ZIP -d $KEYCLOAK_DIR > /dev/null
 mv "$KEYCLOAK_DIR/keycloak-$KEYCLOAK_VERSION" "$KEYCLOAK_DIR/keycloak"
 rm $KEYCLOAK_ZIP
 echo "done"
+
+echo "-----> Downloading postgres jdbc driver"
+JDBC_POSTGRES_VERSION=42.2.5
+POSTGRES_DIR="$KEYCLOAK_DIR/keycloak/modules/system/layers/base/org/postgresql/jdbc/main"
+mkdir -p $POSTGRES_DIR
+curl -L https://repo1.maven.org/maven2/org/postgresql/postgresql/$JDBC_POSTGRES_VERSION/postgresql-$JDBC_POSTGRES_VERSION.jar > "$POSTGRES_DIR/postgres-jdbc.jar"
+cp tools/databases/postgres/module.xml $POSTGRES_DIR
