@@ -29,5 +29,5 @@ echo "-----> Downloading postgres jdbc driver"
 JDBC_POSTGRES_VERSION=42.2.5
 POSTGRES_DIR="$KEYCLOAK_DIR/keycloak/modules/system/layers/base/org/postgresql/jdbc/main"
 mkdir -p $POSTGRES_DIR
-curl -L https://repo1.maven.org/maven2/org/postgresql/postgresql/$JDBC_POSTGRES_VERSION/postgresql-$JDBC_POSTGRES_VERSION.jar > "$POSTGRES_DIR/postgres-jdbc.jar"
+curl -s -L https://repo1.maven.org/maven2/org/postgresql/postgresql/$JDBC_POSTGRES_VERSION/postgresql-$JDBC_POSTGRES_VERSION.jar > "$POSTGRES_DIR/postgres-jdbc.jar"
 cp tools/databases/postgres/module.xml $POSTGRES_DIR
