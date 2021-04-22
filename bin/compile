@@ -7,7 +7,7 @@ CACHE_DIR=${2:-}
 KEYCLOAK_VERSION=`cat ./bin/version`
 KEYCLOAK_DIR="$1/target"
 KEYCLOAK_ZIP="$CACHE_DIR/keycloak-$KEYCLOAK_VERSION.zip"
-KEYCLOAK_URL="https://downloads.jboss.org/keycloak/$KEYCLOAK_VERSION/keycloak-$KEYCLOAK_VERSION.zip"
+KEYCLOAK_URL="https://github.com/keycloak/keycloak/releases/download/$KEYCLOAK_VERSION/keycloak-$KEYCLOAK_VERSION.zip"
 
 mkdir -p $KEYCLOAK_DIR
 
