@@ -24,5 +24,6 @@ Create local folders `build` and `cache`, then just run:
 # Sources
 
 This buildpack takes inspiration from the following sources:
+
 - [metabase-buildpack](https://github.com/metabase/metabase-buildpack) (similar setup: it deploys on Scalingo a Java-based solution that is backed by a PostgreSQL database)
 - [the build script for the official Keycloak docker containers](https://github.com/keycloak/keycloak-containers/blob/master/server/tools/build-keycloak.sh)
